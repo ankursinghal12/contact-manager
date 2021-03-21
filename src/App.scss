@@ -1,0 +1,54 @@
+@import "common-styles/button.scss";
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 100%;
+}
+
+/* Menu styles */
+.menu {
+  font-size: 1rem;
+  display: flex;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  background: #fff;
+  font-weight: 400;
+  border: 1px solid rgba(34,36,38,.15);
+  box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
+  border-radius: .28571429rem;
+  min-height: 2.85714286em;
+  margin-top: 0;
+  &.item {
+    &.two {
+      .item {
+        width: 50%;
+      }
+    }
+    .item {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+  .item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    line-height: 1;
+    text-decoration: none;
+    flex: 0 0 auto;
+    user-select: none;
+    background: 0 0;
+    text-transform: none;
+    color: rgba(0,0,0,.87);
+    font-weight: 400;
+    transition: background .1s ease,box-shadow .1s ease,color .1s ease;
+    &.active {
+      background: rgba(0,0,0,.05);
+      color: rgba(0,0,0,.95);
+      font-weight: 400;
+      box-shadow: none;
+    }
+  }
+}
