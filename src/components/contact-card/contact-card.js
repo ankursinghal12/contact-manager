@@ -14,6 +14,11 @@ const ContactCard = ({contact, deleteContact, index}) => {
   const handleCardClick = () => {
     setShowDetails(!showDetails);
   }
+  const handleDeleteClick = (event) => {
+    event.stopPropagation();
+    deleteContact(index);
+  };
+
   return (
     <div className="card row" onClick={handleCardClick}>
       <div className="content">
@@ -51,7 +56,7 @@ const ContactCard = ({contact, deleteContact, index}) => {
           <button className="basic button green icon" onClick={handleEditClick}>
             <i style={{fontSize: 28}} className="fa fa-pencil-square-o" aria-hidden="true"/>
           </button>
-          <button className="red basic button icon" onClick={(event) => {event.stopPropagation(); deleteContact(index)}}>
+          <button className="red basic button icon" onClick={handleDeleteClick}>
             <i style={{fontSize: 28}} className="fa fa-trash" aria-hidden="true"/>
           </button>
         </div>
